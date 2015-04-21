@@ -12,8 +12,10 @@
     xmlns:renderable="http://playerstage.sourceforge.net/gazebo/xmlschema/#renderable"
     xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics"
     xmlns:xacro="http://ros.org/wiki/xacro">
-
-<xacro:macro name="kinect" params="xyz rpy parent_frame" >
+    
+  <!-- math constants -->
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+  <xacro:macro name="kinect" params="xyz rpy parent_frame" >
   
   <joint name="base_camera_joint" type="fixed">
     <origin xyz="${xyz}" rpy="${rpy}" />
